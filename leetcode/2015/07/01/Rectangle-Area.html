@@ -69,26 +69,36 @@
 <p>Rectangle Area
 Assume that the total area is never beyond the maximum possible value of int.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="c1"># @param {integer} A</span>
-    <span class="c1"># @param {integer} B</span>
-    <span class="c1"># @param {integer} C</span>
-    <span class="c1"># @param {integer} D</span>
-    <span class="c1"># @param {integer} E</span>
-    <span class="c1"># @param {integer} F</span>
-    <span class="c1"># @param {integer} G</span>
-    <span class="c1"># @param {integer} H</span>
-    <span class="c1"># @return {integer}</span>
-    <span class="k">def</span> <span class="nf">computeArea</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">E</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">H</span><span class="p">):</span>
-
-    	<span class="no">X1</span><span class="o">=</span><span class="n">set</span><span class="p">(</span><span class="n">range</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">C</span><span class="p">))</span>
-    	<span class="no">X2</span><span class="o">=</span><span class="n">set</span><span class="p">(</span><span class="n">range</span><span class="p">(</span><span class="n">E</span><span class="p">,</span><span class="n">G</span><span class="p">))</span>
-    	<span class="no">Y1</span><span class="o">=</span><span class="n">set</span><span class="p">(</span><span class="n">range</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">D</span><span class="p">))</span>
-    	<span class="no">Y2</span><span class="o">=</span><span class="n">set</span><span class="p">(</span><span class="n">range</span><span class="p">(</span><span class="n">F</span><span class="p">,</span><span class="n">H</span><span class="p">))</span>
-    	<span class="no">Xlength</span><span class="o">=</span><span class="no">X1</span> <span class="o">&amp;</span> <span class="no">X2</span>
-    	<span class="no">Ylength</span><span class="o">=</span> <span class="no">Y1</span> <span class="o">&amp;</span> <span class="no">Y2</span>
-    	<span class="n">area</span><span class="o">=</span> <span class="n">len</span><span class="p">(</span><span class="no">X1</span><span class="p">)</span><span class="o">*</span><span class="n">len</span><span class="p">(</span><span class="no">Y1</span><span class="p">)</span><span class="o">+</span><span class="n">len</span><span class="p">(</span><span class="no">X2</span><span class="p">)</span><span class="o">*</span><span class="n">len</span><span class="p">(</span><span class="no">Y2</span><span class="p">)</span><span class="o">-</span><span class="n">len</span><span class="p">(</span><span class="no">Xlength</span><span class="p">)</span><span class="o">*</span><span class="n">len</span><span class="p">(</span><span class="no">Ylength</span><span class="p">)</span>
-    	<span class="k">return</span> <span class="n">area</span></code></pre></div>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="c"># @param {integer} A</span>
+    <span class="c"># @param {integer} B</span>
+    <span class="c"># @param {integer} C</span>
+    <span class="c"># @param {integer} D</span>
+    <span class="c"># @param {integer} E</span>
+    <span class="c"># @param {integer} F</span>
+    <span class="c"># @param {integer} G</span>
+    <span class="c"># @param {integer} H</span>
+    <span class="c"># @return {integer}</span>
+    
+    <span class="k">def</span> <span class="nf">computeArea</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">E</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">H</span><span class="p">):</span>
+    	<span class="n">X1</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">C</span><span class="p">))</span>
+    	<span class="n">X2</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">E</span><span class="p">,</span><span class="n">G</span><span class="p">))</span>
+    	<span class="n">Y1</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">D</span><span class="p">))</span>
+    	<span class="n">Y2</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">F</span><span class="p">,</span><span class="n">H</span><span class="p">))</span>
+    	<span class="n">Xlength</span><span class="o">=</span><span class="n">X1</span> <span class="o">&amp;</span> <span class="n">X2</span>
+    	<span class="n">Ylength</span><span class="o">=</span> <span class="n">Y1</span> <span class="o">&amp;</span> <span class="n">Y2</span>
+    	<span class="n">area</span><span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X1</span><span class="p">)</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">Y1</span><span class="p">)</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">X2</span><span class="p">)</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">Y2</span><span class="p">)</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">Xlength</span><span class="p">)</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">Ylength</span><span class="p">)</span>
+    	<span class="k">return</span> <span class="n">area</span>
+    
+    <span class="k">def</span> <span class="nf">computeArea_anotherMethod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">E</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">H</span><span class="p">):</span>
+    	<span class="c">#if two rectangles are not overlap, their left-bottom&#39;s (x,y) must be bigger than the other rectangle right-top point&#39;s either (x,y) </span>
+    	<span class="k">if</span> <span class="n">C</span><span class="o">&lt;=</span><span class="n">E</span> <span class="ow">or</span> <span class="n">F</span><span class="o">&gt;=</span><span class="n">D</span><span class="p">:</span>
+    		<span class="k">return</span> <span class="p">(</span><span class="n">C</span><span class="o">-</span><span class="n">A</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">D</span><span class="o">-</span><span class="n">B</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">G</span><span class="o">-</span><span class="n">E</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">H</span><span class="o">-</span><span class="n">F</span><span class="p">)</span>
+    	<span class="k">elif</span> <span class="n">G</span><span class="o">&lt;=</span><span class="n">A</span> <span class="ow">or</span> <span class="n">B</span><span class="o">&gt;=</span><span class="n">H</span><span class="p">:</span>
+    		<span class="k">return</span> <span class="p">(</span><span class="n">C</span><span class="o">-</span><span class="n">A</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">D</span><span class="o">-</span><span class="n">B</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">G</span><span class="o">-</span><span class="n">E</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">H</span><span class="o">-</span><span class="n">F</span><span class="p">)</span>
+    	<span class="k">else</span><span class="p">:</span>
+    		<span class="n">common</span><span class="o">=</span> <span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="n">G</span><span class="p">)</span><span class="o">-</span><span class="nb">max</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">E</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">H</span><span class="p">)</span><span class="o">-</span><span class="nb">max</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">F</span><span class="p">))</span>
+    		<span class="k">return</span> <span class="p">(</span><span class="n">C</span><span class="o">-</span><span class="n">A</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">D</span><span class="o">-</span><span class="n">B</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">G</span><span class="o">-</span><span class="n">E</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">H</span><span class="o">-</span><span class="n">F</span><span class="p">)</span><span class="o">-</span><span class="n">common</span></code></pre></div>
 
 
   </article>
